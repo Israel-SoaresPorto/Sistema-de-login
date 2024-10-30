@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Login - Recuperação</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/05815059d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="alert">
+      <div class="alert-message">
+        <i class="fa-solid"></i>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="container" id="forgotPasswordPage">
+      <h1>Recuperar Senha</h1>
+      <p class="subtitle">
+        Informe seu email para receber as instruções de recuperação
+      </p>
+
+      <form id="forgotPasswordForm" novalidate>
+        <div class="form-group">
+          <input
+            type="email"
+            id="recoveryEmail"
+            placeholder="Digite seu email"
+            required
+          />
+          <div class="hint hide" id="recoveryEmailError"></div>
+        </div>
+
+        <button type="submit">Enviar instruções</button>
+      </form>
+
+      <div class="links">
+        <a href="index.html">Voltar ao login</a>
+      </div>
+    </div>
+
+    <script type="module" src="js/recuperarSenha.js"></script>
+  </body>
+</html>

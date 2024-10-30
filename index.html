@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Login - Inicio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/05815059d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="alert">
+      <div class="alert-message">
+        <i class="fa-solid"></i>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Login Page -->
+    <div class="container" id="loginPage">
+      <h1>Bem-vindo</h1>
+      <p class="subtitle">Faça login para continuar</p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Admin"
+            name="admin"
+            id="admin"
+            required
+          />
+          <div class="hint hide"></div>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            placeholder="Senha"
+            name="senha"
+            id="senha"
+            required
+          />
+          <div class="hint hide"></div>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <div class="links">
+        <a href="recuperarsenha.html">Esqueceu sua senha?</a>
+        <a href="cadastro.html">Cadastre-se</a>
+      </div>
+    </div>
+
+    <script type="module" src="js/login.js"></script>
+    <!-- <script>
+
+      // Event Listeners
+      document
+        .getElementById("forgotPasswordForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("recoveryEmail").value;
+          const errorElement = document.getElementById("recoveryEmailError");
+          const successElement = document.getElementById("recoverySuccess");
+
+          if (!validateEmail(email)) {
+            errorElement.style.display = "block";
+            successElement.style.display = "none";
+            return;
+          }
+
+          errorElement.style.display = "none";
+          successElement.style.display = "block";
+
+          setTimeout(() => {
+            showPage("loginPage");
+          }, 2000);
+        });      
+    </script> -->
+  </body>
+</html>

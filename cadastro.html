@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Login - Cadastro</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/05815059d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="alert">
+      <div class="alert-message">
+        <i class="fa-solid"></i>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Register Page -->
+    <div class="container" id="registerPage">
+      <h1>Cadastre-se</h1>
+      <p class="subtitle">Preencha os dados para criar sua conta</p>
+
+      <form id="registerForm" novalidate>
+        <div class="form-group">
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Nome completo"
+            required
+          />
+          <div class="hint hide" id="nameError"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required />
+          <div class="hint hide" id="emailError"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="password" placeholder="Senha" required />
+          <div class="hint hide"></div>
+          <div class="password-requirements">
+            <ul>
+              <li id="lengthCheck">Mínimo de 8 caracteres</li>
+              <li id="upperCheck">Uma letra maiúscula</li>
+              <li id="numberCheck">Um número</li>
+              <li id="specialCheck">Um caractere especial</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirme a senha"
+            required
+          />
+          <div class="hint hide" id="passwordError"></div>
+        </div>
+
+        <button type="submit">Criar conta</button>
+      </form>
+
+      <div class="links">
+        <a href="index.html">Já tem uma conta? Faça login</a>
+      </div>
+    </div>
+
+    <script type="module" src="js/cadastro.js"></script>
+  </body>
+</html>
