@@ -142,16 +142,37 @@ a:hover {
 
 .password-requirements li {
   margin: 0.3rem 0;
+  position: relative;
 }
 
 .password-requirements li.valid {
   color: #00c851;
-  list-style-image: url("../assets/check.svg");
+  list-style-type: none;
+}
+
+.password-requirements li.valid::before {
+  content: " ";
+  background-image: url("../assets/valid.png");
+  background-size: cover;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  left: -1rem;
 }
 
 .password-requirements li.invalid {
   color: #ff4444;
-  list-style-image: url("../assets/invalid.svg");
+  list-style-type: none;
+}
+
+.password-requirements li.invalid::before {
+  content: " ";
+  background-image: url("../assets/invalid.png");
+  background-size: cover;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  left: -1rem;
 }
 
 .alert {
